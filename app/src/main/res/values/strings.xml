@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Drawing app</string>
+
+    <string name="tv_ok">OK</string>
+    <string name="tv_cancel">Cancel</string>
+
+    <string name="tv_speed">Speed</string>
+    <string name="tv_clear">Clear</string>
+
+    <string name="tv_width">Width</string>
+    <string name="tv_height">Height</string>
+
+    <string name="btn_size">Size</string>
+    <string name="btn_generate">Generate</string>
+
+</resources>

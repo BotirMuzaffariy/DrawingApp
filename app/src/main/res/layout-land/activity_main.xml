@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primary"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="18dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?actionBarItemBackground"
+        android:elevation="6dp"
+        android:padding="14dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@id/tv_toolbar"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/tv_toolbar"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="@id/tv_toolbar"
+        app:layout_constraintTop_toTopOf="@id/tv_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/algorithms"
+        android:paddingTop="10dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_toolbar"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent="0.47" />
+
+    <uz.lazycoder.drawingapp.customview.MyImageView
+        android:id="@+id/iv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#DDDDDD"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/spn1"
+        app:layout_constraintHeight_percent="0.59"
+        app:layout_constraintStart_toStartOf="@id/spn1"
+        app:layout_constraintTop_toBottomOf="@id/spn1"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/algorithms"
+        android:paddingTop="10dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/spn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/spn1"
+        app:layout_constraintTop_toTopOf="@id/spn1"
+        app:layout_constraintWidth_percent="0.47" />
+
+    <uz.lazycoder.drawingapp.customview.MyImageView
+        android:id="@+id/iv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#DDDDDD"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/spn2"
+        app:layout_constraintHeight_percent="0.59"
+        app:layout_constraintStart_toStartOf="@id/spn2"
+        app:layout_constraintTop_toBottomOf="@id/spn2"
+        app:layout_constraintVertical_bias="0" />
+
+    <Button
+        android:id="@+id/btn_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:minWidth="0dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/btn_size"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv1"
+        app:layout_constraintTop_toBottomOf="@id/iv1" />
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:minWidth="0dp"
+        android:paddingHorizontal="24dp"
+        android:text="@string/btn_generate"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_size"
+        app:layout_constraintEnd_toEndOf="@id/iv1"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@id/btn_size"
+        app:layout_constraintTop_toTopOf="@id/btn_size" />
+
+    <TextView
+        android:id="@+id/tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_speed"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_generate"
+        app:layout_constraintEnd_toStartOf="@id/sb_speed"
+        app:layout_constraintTop_toTopOf="@id/btn_generate" />
+
+    <SeekBar
+        android:id="@+id/sb_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progressBackgroundTint="@color/primary"
+        android:progressTint="@color/primary_variant"
+        android:thumbTint="@color/primary_variant"
+        app:layout_constraintBottom_toBottomOf="@id/tv0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/iv2"
+        app:layout_constraintTop_toTopOf="@id/tv0"
+        app:layout_constraintWidth_percent="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
