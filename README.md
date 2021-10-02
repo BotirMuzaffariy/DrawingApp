@@ -12,5 +12,5 @@ https://user-images.githubusercontent.com/69151373/135706256-2901c9f8-7ec0-49d1-
 https://user-images.githubusercontent.com/69151373/135706653-9c15c166-dbb2-4b99-abaa-892feaebe2a4.mp4
 
 3. You can also set the drawing speed
-4. 
+
 https://user-images.githubusercontent.com/69151373/135706671-ed4dc3f6-324a-4f21-874f-5b135e3ea614.mp4
